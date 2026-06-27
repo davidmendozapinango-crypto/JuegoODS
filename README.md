@@ -84,12 +84,7 @@ Como el **Reto 5 (ODS)** es transversal, cada integrante será responsable de ap
 * **Reto 5:** Incorporar encabezados ecologistas en los archivos de texto exportados.
 
 
-
-
-
-Tu propuesta de trabajo es mucho más eficiente y profesional porque aplica el concepto de **desarrollo en paralelo** y **modularidad**, lo cual es estándar en la ingeniería de software para maximizar la productividad de un equipo. Al trabajar con "stubs" o funciones de prueba (asumiendo que el módulo anterior ya funciona), evitas bloqueos entre los integrantes.
-
-Aquí tienes cómo estructurar esta nueva planificación en Notion para que sea clara y accionable:
+---
 
 ### 🚀 Nueva Estructura de Trabajo: Desarrollo en Paralelo
 
