@@ -1,9 +1,4 @@
 # Proyecto Tombola Descripcion
-¡Entendido! Organizar un proyecto de esta magnitud mientras cursan otras materias es un verdadero reto, pero con una buena estructura es totalmente manejable. La idea de usar Notion es excelente para este caso; la gestión visual mediante tableros tipo Kanban (Por hacer, En progreso, En revisión, Completado) mantendrá a todo el equipo alineado y evitará cuellos de botella.
-
-Con la entrega final programada para el 12 de julio de 2026, y considerando la presión extra que siempre traen los cierres de semestre con los fuertes exámenes de álgebra lineal y demás materias, la clave aquí es que los cuatro integrantes (David, Natalia, Cameron y tú) puedan trabajar en paralelo la mayor cantidad de tiempo posible.
-
-Aquí tienes una propuesta detallada para estructurar el espacio de trabajo y dividir las responsabilidades.
 
 ### 🗂️ Estructura del Tablero de Tareas
 
@@ -90,28 +85,3 @@ Como el **Reto 5 (ODS)** es transversal, cada integrante será responsable de ap
 
 
 * **Informe:** Compilar el Programa fuente de la aplicación para el documento, unificar el formato del informe y redactar el Resumen de actividades del equipo.
-
-
-
----
-
-### 📅 Cronograma Sugerido (Restan ~2.5 Semanas)
-
-Para que todo fluya sin que colapse con las clases diarias:
-
-* **Días 1 a 4 (Base):** Integrantes 1 y 2 terminan los Módulos 1 y 2. Sin esto, el Módulo 3 no puede arrancar formalmente con datos reales.
-
-
-* **Días 5 a 10 (Core):** Integrante 3 desarrolla el motor del juego completo. Integrante 4 puede ir programando las funciones de ordenamiento y formatos de impresión usando datos "dummy" (falsos) hasta que el archivo `JUEGOS.bin` esté listo.
-
-
-* **Días 11 a 14 (Integración):** Todos unen sus códigos. Se ajustan los colores y mensajes del `modulo_ods.py` en conjunto.
-
-
-* **Días 15 al 17 (Cierre):** Pruebas exhaustivas para prepararse para la defensa grupal y finalización del informe escrito.
-
-
-
-Esta estructura les permite avanzar a todos desde el día uno y asegura que la carga del código y del informe esté balanceada.
-
-¿Qué integrante crees que se adapta mejor a la lógica de matrices del Reto 2 y quién prefieres que se encargue del motor del juego en el Reto 3?
