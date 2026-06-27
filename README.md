@@ -84,4 +84,56 @@ Como el **Reto 5 (ODS)** es transversal, cada integrante será responsable de ap
 * **Reto 5:** Incorporar encabezados ecologistas en los archivos de texto exportados.
 
 
-* **Informe:** Compilar el Programa fuente de la aplicación para el documento, unificar el formato del informe y redactar el Resumen de actividades del equipo.
+
+
+
+Tu propuesta de trabajo es mucho más eficiente y profesional porque aplica el concepto de **desarrollo en paralelo** y **modularidad**, lo cual es estándar en la ingeniería de software para maximizar la productividad de un equipo. Al trabajar con "stubs" o funciones de prueba (asumiendo que el módulo anterior ya funciona), evitas bloqueos entre los integrantes.
+
+Aquí tienes cómo estructurar esta nueva planificación en Notion para que sea clara y accionable:
+
+### 🚀 Nueva Estructura de Trabajo: Desarrollo en Paralelo
+
+#### Fase 1: Núcleo Lógico (Retos 1, 2 y 3)
+
+*El objetivo es que los cuatro integrantes trabajen simultáneamente usando datos de prueba predefinidos para avanzar rápido.*
+
+* **Integrante 1 (Reto 1):** Lógica de registro, validación recursiva de clave y manejo del archivo `JUGADORES.bin`.
+
+
+* **Integrante 2 (Reto 2):** Creación de las matrices $N \times N$, lógica de llenado de números y emparejamiento principal/complemento.
+
+
+* **Integrante 3 (Reto 3):** Motor del juego (sorteo de números sin repetición), lógica de marcado de casillas y detección de "GANADOR".
+
+
+* **Integrante 4 (Reto 3/Integrador):** Creación de las estructuras de datos auxiliares para el `JUEGOS.bin` y apoyo en la validación de los datos que los otros tres módulos necesitan para comunicarse entre sí.
+
+
+
+#### Fase 2: Front-end (Interfaz en Consola) y Reportes
+
+*Una vez terminada la lógica, el equipo se reconfigura para optimizar la visualización y las tareas administrativas.*
+
+* **Front-end (Integrante 1, 2 y 3):**
+* **Menú y Registro:** Diseñar el flujo de pantallas del Reto 1, integrando el "Banner de Bienvenida" del Reto 5.
+
+
+* **Visualización de Cartones:** Implementar los códigos de color ANSI para diferenciar casillas vacías de números y mostrar el ODS seleccionado.
+
+
+* **Interfaz de Juego:** Lograr que la pantalla se mantenga actualizada, mostrando los números sorteados y los mensajes alusivos a las ODS durante la partida.
+
+
+* **Reportes (Integrante 4):**
+* Diseñar los cuatro subprogramas (estadísticas de jugadores, ranking de números frecuentes con Diagrama de Gantt, detalle de juegos y Top 5 de jugadores).
+
+
+* Generar los archivos de texto (`.txt`) con los reportes solicitados en los requerimientos.
+
+
+#### Fase 3: Documentación y Unificación
+
+* **Cada integrante:** Documenta su propio código, algoritmos y diseño según lo que desarrolló en las Fases 1 y 2.
+
+
+* **Responsable final:** Se encarga de ensamblar el informe escrito (Introducción, formulación, carta modular, programa fuente, etc.).
