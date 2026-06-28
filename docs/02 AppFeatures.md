@@ -43,6 +43,7 @@ The following is a comprehensive list of features for the **SDG-themed Tombola**
 ### **5. Environmental Integration (Challenge 5)**
 *   **Educational Content:** Creative integration of images, colors, and slogans related to the SDGs throughout the entire user experience.
 *   **Interactive Slogans:** Motivational and educational messages alusive to the chosen SDG theme appear dynamically at the bottom of the screen during gameplay.
+*   **Spanish Graphical Language:** All on-screen text, menus, slogans, status messages, and winner announcements rendered in the graphical interface must be in **Spanish**.
 
 To help you complete your project documentation, here is a detailed and creative breakdown of the project stages based on the source material and the specific requirements of the **SDG-themed Tombola**.
 
