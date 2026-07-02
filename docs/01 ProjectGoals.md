@@ -1,5 +1,4 @@
 # Project Title: Tombola Game
-
 ## Description
 The **Sustainable Development Goals (SDG) Tombola** is a Python-based application developed for the Algorithms and Programming course at the Universidad Católica Andrés Bello. The project challenges students to build a functional bingo-style game that promotes the United Nations' Sustainable Development Goals through its mechanics, visual design, and informative content.
 
@@ -107,6 +106,7 @@ Before testing the MVP, verify:
 The mandatory technological requirements include:
 *   **Programming Language:** Python and pygame.
 *   **Storage:** Binary files for data persistence (e.g., `JUGADORES.bin` and `JUEGOS.bin`).
+*   **Graphical Language:** All text, labels, slogans, and UI messages displayed in the graphical interface must be in **Spanish**.
 
 ## How this document fits with the others
 

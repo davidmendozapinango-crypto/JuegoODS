@@ -216,8 +216,3 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-data/JUEGOS.bin
-data/JUGADORES.bin
-reports/gantt.txt
-reports/logs.txt
-reports/player_summary.txt

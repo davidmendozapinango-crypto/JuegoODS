@@ -12,6 +12,7 @@ This tech stack proposal integrates the mandatory academic requirements with **P
     *   **Visual Interface:** Rendering the $N \times N$ game cards and highlighting marked numbers.
     *   **Animation:** Managing the tombola draw and the "GANADOR" (WINNER) announcement.
     *   **Educational Overlay:** Displaying SDG images and rotating environmental slogans at the bottom of the screen.
+    *   **Language:** All graphical text, labels, slogans, and messages shown in the Pygame interface must be in **Spanish**.
 *   **Backend (Python Core):**
     *   **Recursive Logic:** Handling the mandatory **recursive algorithm** for access key validation.
     *   **Game Engine:** Managing random, non-repeating number generation and determining the winner based on the SDG patterns.
@@ -29,6 +30,60 @@ This tech stack proposal integrates the mandatory academic requirements with **P
 *   **Modular Decomposition:** The project must be organized into clear modules (e.g., `auth.py`, `game_logic.py`, `ui_render.py`, `reporting.py`).
 *   **Asset Management:** A dedicated folder for SDG images and fonts to ensure the "creative sense" is consistent across the app.
 *   **Testing:** Conduct "runs" (corridas) to verify that the random number generation correctly marks cards and stops exactly when a figure is completed.
+
+```text
+JuegoODS/
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config.py
+│   ├── auth/
+│   │   ├── __init__.py
+│   │   ├── registration.py
+│   │   ├── login.py
+│   │   └── validator.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── card.py
+│   │   ├── game.py
+│   │   └── points.py
+│   ├── persistence/
+│   │   ├── __init__.py
+│   │   ├── players.py
+│   │   └── games.py
+│   ├── reports/
+│   │   ├── __init__.py
+│   │   ├── ranking.py
+│   │   ├── gantt.py
+│   │   └── logs.py
+│   ├── ui/
+│   │   ├── __init__.py
+│   │   ├── app.py
+│   │   ├── screens.py
+│   │   ├── renderer.py
+│   │   └── assets.py
+│   └── ods/
+│       ├── __init__.py
+│       ├── data.py
+│       └── messages.py
+├── assets/
+│   ├── images/ods/
+│   ├── fonts/
+│   └── sounds/
+├── data/
+│   ├── JUGADORES.bin
+│   └── JUEGOS.bin
+├── tests/
+│   ├── test_auth.py
+│   ├── test_card.py
+│   ├── test_game.py
+│   └── test_persistence.py
+├── docs/
+├── README.md
+├── requirements.txt
+├── pyproject.toml
+└── .gitignore
+```
 
 ## **Future Enhancements**
 *   **Soundscapes:** Adding audio clips that explain each SDG when a card is selected.
