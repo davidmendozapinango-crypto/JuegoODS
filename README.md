@@ -160,7 +160,7 @@ JuegoODS/
 
 ## 7. Créditos y Licencia
 
-**Autores**: Equipo de desarrollo de JuegoODS - Universidad Católica Andrés Bello.
+**Autores**: David Mendoza, Albert Gonzales, Cameron Montoya, Natalia Azocar.
 
 **Inspiración**: Objetivos de Desarrollo Sostenible de las Naciones Unidas.
 

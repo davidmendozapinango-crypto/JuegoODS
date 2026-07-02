@@ -20,7 +20,7 @@ from core.points import card_sum
 from ods.data import get_ods_themes
 from persistence.games import save_game
 from reports.export import export_report
-from ui.messages import get
+from ui.messages import get, get_ods_messages
 from ui.renderer import draw_button, draw_card, draw_text, draw_text_input
 
 
@@ -446,6 +446,9 @@ class GameScreen(BaseScreen):
         self.speed_ms = None
         self.pending_draws = []
         self.current_number = None
+        self.current_ods_message = ""
+        self.ods_messages = get_ods_messages()
+        self.ods_message_index = 0
         self.game_over = False
         self.last_draw_time = 0
 
@@ -464,6 +467,10 @@ class GameScreen(BaseScreen):
             return
         number = self.pending_draws.pop(0)
         self.current_number = number
+        self.current_ods_message = self.ods_messages[
+            self.ods_message_index % len(self.ods_messages)
+        ]
+        self.ods_message_index += 1
         main, complement = self.state.cards
         main.mark_number(number)
         complement.mark_number(number)
@@ -525,6 +532,8 @@ class GameScreen(BaseScreen):
         random.shuffle(self.pending_draws)
         self.game_over = False
         self.current_number = None
+        self.current_ods_message = ""
+        self.ods_message_index = 0
         self.draw_timer = 0
         self.speed_ms = None
 
@@ -560,6 +569,14 @@ class GameScreen(BaseScreen):
                 (255, 255, 0),
                 400,
                 50,
+            )
+            draw_text(
+                surface,
+                self.current_ods_message,
+                self.small_font,
+                (150, 220, 255),
+                180,
+                620,
             )
         draw_text(
             surface,

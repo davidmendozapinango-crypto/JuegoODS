@@ -38,7 +38,7 @@ STATE_CODES = {
     "SUC",
     "TAC",
     "TRU",
-    "VARGAS",
+    "VAR",
     "YAR",
     "ZUL",
     "ZAM",

@@ -44,6 +44,34 @@ MESSAGES = {
     "key_consecutive": "La clave no puede tener más de 3 caracteres iguales seguidos.",
 }
 
+ODS_MESSAGES = [
+    "Cada acción cuenta para construir un futuro más justo y sostenible.",
+    "Los ODS nos recuerdan que la igualdad y la dignidad humana van de la mano.",
+    "Pequeñas decisiones diarias pueden transformar comunidades enteras.",
+    "La educación de calidad abre puertas a un mundo con más oportunidades.",
+    "Cuidar el agua es cuidar la vida de las personas y los ecosistemas.",
+    "Una energía limpia ayuda a proteger el planeta para las próximas generaciones.",
+    "Trabajar con justicia impulsa el desarrollo económico y social.",
+    "La innovación puede resolver grandes desafíos con soluciones creativas.",
+    "Reducir las desigualdades fortalece la convivencia y la estabilidad.",
+    "Ciudades más sostenibles mejoran la calidad de vida de todos.",
+    "Consumir responsablemente conserva recursos para el futuro.",
+    "Actuar frente al cambio climático es una responsabilidad compartida.",
+    "Proteger los océanos es proteger la biodiversidad del planeta.",
+    "La vida en la tierra depende de conservar nuestros ecosistemas.",
+    "La paz y la justicia son base para sociedades más seguras.",
+    "La colaboración internacional multiplica el impacto de las soluciones.",
+    "Cuando todos participan, el progreso se vuelve más inclusivo.",
+    "Un mundo sostenible empieza con decisiones responsables hoy.",
+    "Los ODS nos invitan a pensar en el bienestar colectivo.",
+    "Cada reto ambiental también es una oportunidad para innovar.",
+    "La sostenibilidad es el camino para una vida mejor para todos.",
+]
+
 
 def get(key: str) -> str:
     return MESSAGES.get(key, key)
+
+
+def get_ods_messages() -> list[str]:
+    return ODS_MESSAGES.copy()
