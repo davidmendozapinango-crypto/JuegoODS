@@ -1,22 +1,8 @@
 import numpy as np #Parte de: Albert
-
-def main():
-    ###################################################################################################
-    #FALARIA VALIDAR BIEN C/, HACER UNA FUNCION PARA CADA PAREJA Y UN SUB-MENU PARA ELEJIR LA PAREJA SEGUN LA LETRA(SOS)
-    ###################################################################################################
-    
-    #Validacion y Entrada de Datos
-    N = int(input("Ingrese la cantidad de filas y columnas de la matriz: "))
-    while (N%2 == 0) or (N < 5):
-        if (N < 5):
-            print("Error, el tamaño debe ser mayor o igual a 5")
-        else:
-            print("Error, el tamaño debe ser impar")
-        N = int(input("Ingrese la cantidad de filas y columnas de la matriz: "))
-    print()
             
-    #Llenado & Patrones de las Parejas de Matrices 
-    #---------------------------------- RELOJES DE ARENA A ----------------------------------
+#Llenado & Patrones de las Parejas de Matrices
+def relojes_arena_A(N):
+    #---------------------------------- RELOJES DE ARENA (A) ----------------------------------
     #Llenado por filas de anajo a arriba de izq a der
     print("A1 - Fin Pobreza")
     reloj_fil = np.zeros((N, N), dtype = "int")
@@ -47,41 +33,45 @@ def main():
                 cont += 1
     print(reloj_col_inv)
     print()
+    return reloj_fil, reloj_col_inv
 
-    
-    #---------------------------------- RELOJES DE ARENA B ----------------------------------
+def relojes_arena_B(N):
+    #---------------------------------- RELOJES DE ARENA (B) ----------------------------------
     #Llenado de reloj por columnas inverso de abajo a arriba de der a izq
     print("B1 - Salud y Bienestar")
-    reloj_col = np.zeros((N, N), dtype = "int")
+    reloj_col_low = np.zeros((N, N), dtype = "int")
     cont = 1
+    centro = N//2
     for i in range(0, N, 1):
         for j in range(0, N, 1):
             if (j <= centro) and (i >= j) and (j <= N-1-i):
-                reloj_col[i, j] = cont
+                reloj_col_low[i, j] = cont
                 cont += 1
             elif (j >= centro) and (j >= i) and (j >= N-i-1):
-                reloj_col[i, j] = cont
+                reloj_col_low[i, j] = cont
                 cont += 1
-    print(reloj_col)
+    print(reloj_col_low)
     print()
     
     #Llenado de reloj por columnas de arriba a abajo de izq a der
     print("B2 - Educacion de Calidad")
-    reloj_col = np.zeros((N, N), dtype = "int")
+    reloj_col_top = np.zeros((N, N), dtype = "int")
     cont = 1
     #Llenado por columnas
     for j in range(0, N, 1):
         for i in range(0, N, 1):
             if (i <= centro) and (j >= i) and (j <= N - 1 - i):
-                reloj_col[i, j] = cont
+                reloj_col_top[i, j] = cont
                 cont += 1
             elif (i > centro) and (j >= N - 1 - i) and (j <= i):
-                reloj_col[i, j] = cont
+                reloj_col_top[i, j] = cont
                 cont += 1
-    print(reloj_col, "\n")
-    
-    
-    #---------------------------------- ESQUINAS ----------------------------------
+    print(reloj_col_top, "\n")
+    print()
+    return reloj_col_low, reloj_col_top
+
+def rombos(N):
+    #---------------------------------- ROMBOS (C) ----------------------------------
     #Llenado en rombo por filas de abajo a arriba y de der a izq
     print("C1 - Igualdad de Genero")
     rombo_filas = np.zeros((N, N), dtype = "int")
@@ -123,9 +113,10 @@ def main():
             aux += 1
     print(rombo_cols)
     print()
-    
-    
-    #---------------------------------- ROMBOS ----------------------------------
+    return rombo_filas, rombo_cols
+
+def esquinas(N):
+    #---------------------------------- ESQUINAS (D) ----------------------------------
     #Llenado en rombo por filas de abajo a rriba y de der a izq
     print("D1 - Energia Asequible y No Contaminante")
     corners_filas = np.zeros((N, N), dtype = "int")
@@ -167,9 +158,10 @@ def main():
             aux -= 1
     print(corners_cols)
     print()
-    
-    
-    #---------------------------------- TORNADOS ----------------------------------
+    return corners_filas, corners_cols
+
+def tornados(N):
+    #---------------------------------- TORNADOS (E) ----------------------------------
     #Llenado en Tornado dejando espacios de recorrido Der->Abajo->Izq->Arriba
     print("E1 - Industria, Innovacion e Infraestructura")
     m_tornado_1 = np.zeros((N, N), dtype=int)
@@ -210,7 +202,7 @@ def main():
             left += 1
     print(m_tornado_1)
     print()
-    
+
     #Llenado en Tornado dejando espacios de recorrido Abajo->Der->Arriba->Izq
     print("E2 - Reduccion de las Desigualdades")
     m_tornado_2 = np.zeros((N, N), dtype=int)
@@ -220,7 +212,6 @@ def main():
     right = N - 1
     cont = 1
     while top <= bottom and left <= right:
-        
         #Arriba a Abajo
         for i in range(top, bottom + 1):
             if (i + left) % 2 == 0:
@@ -252,9 +243,10 @@ def main():
             top += 1       
     print(m_tornado_2)
     print()
-    
-    
-    #---------------------------------- DIAGONALES ESPACIADAS ----------------------------------
+    return m_tornado_1, m_tornado_2
+
+def diagonales_espaciadas(N):
+    #---------------------------------- DIAGONALES ESPACIADAS (F) ----------------------------------
     #Llenado de diagonales por columas de izq a der de arriba a abajo
     print("F1 - Cudades y Comunidades Sostenibles")
     suma = 0
@@ -284,9 +276,10 @@ def main():
         suma -= 2
     print(diag_low)
     print()
+    return diag_top, diag_low
     
-    
-    #---------------------------------- Z y N ----------------------------------
+def zeta_ene(N):
+    #---------------------------------- Z y N (G) ----------------------------------
     #Llenado en Z por filas de abajo a arriba y de der a izq
     print("G1 - Accion por el Clima")  
     zeta = np.zeros((N,N), dtype = "int")
@@ -310,9 +303,10 @@ def main():
                 cont += 1
     print(ene)
     print()
-    
-    
-    #---------------------------------- DIAGONALES SIN CENTRO ----------------------------------
+    return zeta, ene
+
+def diags_sin_centro(N):
+    #---------------------------------- DIAGONALES SIN CENTRO (H) ----------------------------------
     #Llenado de diagonales sin centro por filas de abajo a arriba en ambos sentidos
     print("H1 - Vida de Ecosistemas Terrestres")
     diag = np.zeros((N,N), dtype = "int")
@@ -346,7 +340,75 @@ def main():
                 cont += 1
     print(diag_inv)
     print()
+    return diag, diag_inv
+    
+def menu_cartones():
+    #Validacion y Entrada de Datos
+    N = int(input("Ingrese la cantidad de filas y columnas de la matriz: "))
+    while (N%2 == 0) or (N < 5):
+        if (N < 5):
+            print("Error, el tamaño debe ser mayor o igual a 5")
+        else:
+            print("Error, el tamaño debe ser impar")
+        N = int(input("Ingrese la cantidad de filas y columnas de la matriz: "))
+    print()
+    
+    print("===================================================================")
+    print("                CATÁLOGO DE MATRICES DISPONIBLES                   ")
+    print("===================================================================\n")
+    print("--- OPCIÓN A ---")
+    relojes_arena_A(N)
 
-     
+    print("--- OPCIÓN B ---")
+    relojes_arena_B(N)
+    
+    print("--- OPCIÓN C ---")
+    rombos(N)
+    
+    print("--- OPCIÓN D ---")
+    esquinas(N)
+    
+    print("--- OPCIÓN E ---")
+    tornados(N)
+    
+    print("--- OPCIÓN F ---")
+    diagonales_espaciadas(N)
+    
+    print("--- OPCIÓN G ---")
+    zeta_ene(N)
+    
+    print("--- OPCIÓN H ---")
+    diags_sin_centro(N)
+    print("===================================================================\n")
+
+    opcion = input("¿Qué letra o qué pareja deseas elegir? ")  
+    opcion = opcion.upper()
+    if opcion == "A":
+        print("\n>> Tu elección ha sido la pareja A")
+        relojes_arena_A(N)        
+    elif opcion == "B":
+        print("\n>> Tu elección ha sido la pareja B")
+        relojes_arena_B(N)        
+    elif opcion == "C":
+        print("\n>> Tu elección ha sido la pareja C")
+        rombos(N)        
+    elif opcion == "D":
+        print("\n>> Tu elección ha sido la pareja D")
+        esquinas(N)        
+    elif opcion == "E":
+        print("\n>> Tu elección ha sido la pareja E")
+        tornados(N)   
+    elif opcion == "F":
+        print("\n>> Tu elección ha sido la pareja F")
+        diagonales_espaciadas(N)
+    elif opcion == "G":
+        print("\n>> Tu elección ha sido la pareja G")
+        zeta_ene(N)        
+    elif opcion == "H":
+        print("\n>> Tu elección ha sido la pareja H")
+        diags_sin_centro(N)        
+    else:
+        print("\n[!] Opción inválida. Por favor, selecciona una letra válida entre la A y la H.")
+    
 if __name__ == "__main__":      
-    main()
+    menu_cartones()
